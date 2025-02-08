@@ -28,8 +28,8 @@ RUN rm -rf ./*
 # Copy built files from the previous stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Expose port 8080 (default for OpenShift)
-EXPOSE 8080
+# Expose port 3000 (default for OpenShift)
+EXPOSE 3000
 
 # Copy a basic Nginx configuration (optional but recommended)
 COPY nginx.conf /etc/nginx/nginx.conf
